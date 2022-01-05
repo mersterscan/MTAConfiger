@@ -21,14 +21,20 @@ print("\n[#] - - - - - - - - - - - MTA:SA Configer - - - - - - - - - - - - [#]\n
 
 MTALoc = None
 
-try:
-    Chekonam = input("<>--<> Man Amade Hastam , Chikar Konam ? --> ")
-    Chekonam = int(Chekonam)
-except:
-    print("Lotfan Dar Vared Kardan Maghadir Deghat Kamel Konid !.")
-    Chekonam = input("\n<>--<> Man Amade Hastam , Chikar Konam ? --> ")
-    Chekonam = int(Chekonam) 
+def get_num():
+    try:
+        result = int(input("<>--<> Man Amade Hastam , Chikar Konam ? --> "))
+        if(result > 6 or 1 > result):
+            print("az 1 ta 6 faghat ghaboole :\")
+			return get_num()
+        else:
+			return result
+    except:
+        print("lotfan faghat adad vared konid :\")
+        return get_num()
 
+Chekonam = get_num()
+			  
 # - - - - - - - - - - - - -  - - - - - - - - - - - #
 
 if Chekonam == 1:
