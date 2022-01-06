@@ -8,11 +8,7 @@ try:
     from time import sleep
 except:
     system("pip3 install time")
-try:
-    from pyfiglet import figlet_format
-except:
-    system("pip3 install pyfiglet")
-    system("cls" or "clear")
+    from time import sleep
 # - - - - - - - - - - - - - - - - - - - - - - - - - #
 
 system("cls" or "clear")
